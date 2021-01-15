@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import moment from "moment";
 import Header from "./header";
 import "./styles.css";
+import {FaBell} from 'react-icons/fa';
 
 export default function Calendar({ value, onChange }) {
   const [calendar, setCalendar] = useState([]);
@@ -103,9 +104,18 @@ export default function Calendar({ value, onChange }) {
                     {day.format("D").toString()}
                   </div> 
                   <div className="flex-container">
-                    <div className={hiddenStyles(day)}>i</div>
-                    <div className={hiddenStyles(day)}>love</div>
-                    <div className={hiddenStyles(day)}>u</div>
+                    <div className={hiddenStyles(day)}><button type ="button" className="icon-button">
+                      <FaBell />
+                      <span className="icon-button_badge">2</span></button>
+                    </div>                    
+                    <div className={hiddenStyles(day)}><button type ="button" className="icon-button">
+                      <FaBell />
+                      <span className="icon-button_badge">2</span></button>
+                    </div>
+                    <div className={hiddenStyles(day)}><button type ="button" className="icon-button">
+                      <FaBell />
+                      <span className="icon-button_badge">2</span></button>
+                    </div>
                   </div>
                 </div>
                 </div>
